@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ร้านไก่ทอด 5 ดาว - ระบบสั่งจองอาหารออนไลน์</title>
+
+<style>
+body { margin:0; font-family: Arial, sans-serif; background:#fff5e6; }
+header { background:#c1121f; color:white; padding:20px; text-align:center; font-size:24px; font-weight:bold; }
+nav { background:#f77f00; padding:10px; text-align:center; }
+nav button { margin:5px; padding:10px 15px; border:none; border-radius:5px; font-weight:bold; cursor:pointer; }
+nav button:hover { background:#ffd166; }
+.section { display:none; padding:20px; }
+.card { background:white; padding:15px; margin:10px 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+.action { background:#c1121f; color:white; padding:8px 12px; border:none; border-radius:5px; cursor:pointer; }
+.action:hover { background:#780000; }
+footer { background:#c1121f; color:white; text-align:center; padding:10px; margin-top:20px; }
+</style>
+
+<script>
+function showSection(id){
+    var sections=document.getElementsByClassName("section");
+    for(var i=0;i<sections.length;i++){ sections[i].style.display="none"; }
+    document.getElementById(id).style.display="block";
+}
+</script>
+
+</head>
+<body>
+
+<header>🍗 ร้านไก่ทอด 5 ดาว - ระบบสั่งจองอาหารออนไลน์</header>
+
+<nav>
+<button onclick="showSection('customer')">ลูกค้า</button>
+<button onclick="showSection('restaurant')">ผู้ดูแลร้าน</button>
+<button onclick="showSection('rider')">ผู้ส่งอาหาร</button>
+<button onclick="showSection('admin')">ผู้ดูแลระบบ</button>
+</nav>
+
+<div id="customer" class="section" style="display:block;">
+<h2>👤 สมาชิก / ลูกค้า</h2>
+<div class="card">
+<h3>เมนูแนะนำ</h3>
+<p>ชุดไก่ทอด 5 ชิ้น - 129 บาท</p>
+<button class="action">เพิ่มลงตะกร้า</button>
+</div>
+<div class="card">
+<h3>ตะกร้าสินค้า</h3>
+<p>รายการทั้งหมด: 2 รายการ</p>
+<p>รวมราคา: 258 บาท</p>
+<button class="action">ชำระเงิน</button>
+</div>
+</div>
+
+<div id="restaurant" class="section">
+<h2>🏪 ผู้ดูแลร้านอาหาร</h2>
+<div class="card">
+<h3>จัดการเมนู</h3>
+<button class="action">เพิ่มเมนู</button>
+<button class="action">แก้ไขราคา</button>
+</div>
+<div class="card">
+<h3>ออเดอร์วันนี้</h3>
+<p>จำนวน 15 รายการ</p>
+<button class="action">ดูรายละเอียด</button>
+</div>
+</div>
+
+<div id="rider" class="section">
+<h2>🚚 ผู้ส่งอาหาร</h2>
+<div class="card">
+<h3>งานจัดส่ง</h3>
+<p>ชื่อลูกค้า: สมชาย</p>
+<p>ที่อยู่: ชลบุรี</p>
+<button class="action">รับงาน</button>
+<button class="action">ยืนยันส่งสำเร็จ</button>
+</div>
+</div>
+
+<div id="admin" class="section">
+<h2>🛠 ผู้ดูแลระบบ</h2>
+<div class="card">
+<h3>สถิติระบบ</h3>
+<p>สมาชิกทั้งหมด: 120 คน</p>
+<p>ยอดขายวันนี้: 4,500 บาท</p>
+</div>
+<div class="card">
+<h3>จัดการผู้ใช้งาน</h3>
+<button class="action">เพิ่มผู้ใช้</button>
+<button class="action">ลบผู้ใช้</button>
+</div>
+</div>
+
+<footer>© 2026 ร้านไก่ทอด 5 ดาว ออนไลน์</footer>
+
+</body>
+</html>
