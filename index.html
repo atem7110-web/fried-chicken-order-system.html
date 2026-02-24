@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ระบบสั่งจองอาหารออนไลน์ - ร้านไก่ทอด</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+}
+
+header {
+    background: #d62828;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    background: #f77f00;
+    padding: 10px;
+    text-align: center;
+}
+
+nav button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background: white;
+    color: #d62828;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background: #ffe5b4;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+button.action {
+    background: #d62828;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.action:hover {
+    background: #a4161a;
+}
+</style>
+
+<script>
+function showSection(id) {
+    var sections = document.getElementsByClassName("section");
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+    }
+    document.getElementById(id).style.display = "block";
+}
+</script>
+</head>
+
+<body>
+
+<header>
+🍗 ระบบสั่งจองอาหารออนไลน์ - ร้านไก่ทอด 5 ดาว
+</header>
+
+<nav>
+<button onclick="showSection('customer')">ลูกค้า</button>
+<button onclick="showSection('restaurant')">ผู้ดูแลร้าน</button>
+<button onclick="showSection('rider')">ผู้ส่งอาหาร</button>
+<button onclick="showSection('admin')">ผู้ดูแลระบบ</button>
+</nav>
+
+<!-- ลูกค้า -->
+<div id="customer" class="section" style="display:block;">
+<h2>👤 สมาชิก / ลูกค้า</h2>
+
+<div class="card">
+<h3>เมนูไก่ทอด</h3>
+<p>ชุดไก่ทอด 5 ชิ้น - 129 บาท</p>
+<button class="action">เพิ่มลงตะกร้า</button>
+</div>
+
+<div class="card">
+<h3>ชุดครอบครัว 10 ชิ้น</h3>
+<p>ราคา 249 บาท</p>
+<button class="action">เพิ่มลงตะกร้า</button>
+</div>
+
+<div class="card">
+<h3>ตะกร้าสินค้า</h3>
+<p>จำนวนสินค้า: 2 รายการ</p>
+<p>ราคารวม: 378 บาท</p>
+<button class="action">ชำระเงิน</button>
+</div>
+</div>
+
+<!-- ผู้ดูแลร้าน -->
+<div id="restaurant" class="section">
+<h2>🏪 ผู้ดูแลร้านอาหาร</h2>
+
+<div class="card">
+<h3>จัดการเมนู</h3>
+<button class="action">เพิ่มเมนูใหม่</button>
+<button class="action">แก้ไขราคา</button>
+</div>
+
+<div class="card">
+<h3>จัดการคำสั่งซื้อ</h3>
+<p>ออเดอร์วันนี้: 15 รายการ</p>
+<button class="action">ดูรายละเอียด</button>
+</div>
+</div>
+
+<!-- ผู้ส่งอาหาร -->
+<div id="rider" class="section">
+<h2>🚚 ผู้ส่งอาหาร</h2>
+
+<div class="card">
+<h3>งานที่ได้รับ</h3>
+<p>ชื่อลูกค้า: สมชาย</p>
+<p>ที่อยู่: ชลบุรี</p>
+<button class="action">รับงาน</button>
+<button class="action">ยืนยันส่งแล้ว</button>
+</div>
+</div>
+
+<!-- ผู้ดูแลระบบ -->
+<div id="admin" class="section">
+<h2>🛠 ผู้ดูแลระบบ</h2>
+
+<div class="card">
+<h3>สถิติระบบ</h3>
+<p>จำนวนสมาชิก: 120 คน</p>
+<p>จำนวนร้าน: 1 ร้าน</p>
+<p>ยอดขายรวมวันนี้: 4,500 บาท</p>
+</div>
+
+<div class="card">
+<h3>จัดการผู้ใช้งาน</h3>
+<button class="action">เพิ่มผู้ใช้</button>
+<button class="action">ลบผู้ใช้</button>
+</div>
+</div>
+
+</body>
+</html>
